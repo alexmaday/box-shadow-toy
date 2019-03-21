@@ -16,3 +16,16 @@ form {
   width: 308px;
   padding: 12px;
 }
+label,
+input {
+  display: block;
+  width: 250px;
+  margin: 12px auto;
+}
+
+legend {
+  margin-bottom: 14px;
+}
+fieldset {
+  border-radius: 13px;
+}
