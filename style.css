@@ -1,0 +1,21 @@
+.container {
+  font-family: Fira-sans, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+#box {
+  background-color: red;
+  height: 25vh;
+  width: 25vh;
+  margin-bottom: 100px;
+}
+.ui {
+  width: 30vw;
+  border: 1px solid gray;
+}
+form {
+  padding: 12px;
+}

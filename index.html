@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>CSS box-shadow Toy</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div id="box"></div>
+      <div class="ui">
+        <form action="">
+          <fieldset>
+            <legend>Attributes for Box Shadow</legend>
+
+            <input
+              type="range"
+              id="x"
+              name="x-offset"
+              min="-20"
+              max="20"
+              value="0"
+            />
+            <label for="x-offset" id="x-label">x-offset</label>
+            <input
+              type="range"
+              id="y"
+              name="y-offset"
+              min="-20"
+              max="20"
+              value="0"
+            />
+            <label for="y-offset">y-offset</label>
+            <input
+              type="range"
+              id="blur"
+              name="blur-radius"
+              min="-20"
+              max="20"
+              value="0"
+            />
+            <label for="blur-radius">blur-radius</label>
+            <input
+              type="range"
+              id="spread"
+              name="spread-radius"
+              min="-20"
+              max="20"
+              value="0"
+            />
+            <label for="spread-radius">spread-radius</label>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
