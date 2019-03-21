@@ -7,7 +7,7 @@ Just a small experiment to visualize how `box-shadow` works. My current model is
 TODO:
 
 - JavaScript: There is a most basic skeleton. I've started to hook up some event listeners for each input[range]. It works, but it smells pretty bad. Remember this is version 0.01.
-- Styling: layout breaks very easily, also there's no reason to have a border around the form's `fieldset`. Derp. Flexbox maybe?
+- ~~Styling: layout breaks very easily, also there's no reason to have a border around the form's `fieldset`~~
 - Range labels should include current value
   - look at some example forms using range attributes
 - maybe add a reset button?
