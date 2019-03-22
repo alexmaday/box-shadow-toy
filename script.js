@@ -8,23 +8,17 @@ document.addEventListener("DOMContentLoaded", function() {
     let box = document.getElementById("box");
     box.style.boxShadow = xOffset.value;
   }
-  let xOffset = document.getElementById("x");
-  let yOffset = document.getElementById("y");
-  let blur = document.getElementById("blur");
-  let spread = document.getElementById("spread");
-  // add event listeners for each range control
 
-  xOffset.addEventListener("input", function() {
-    console.log("Value for x: " + xOffset.value);
-    // changeBoxShadow();
+  document.getElementById("x").addEventListener("input", function() {
+    console.log("Value for x: " + this.value);
   });
-  yOffset.addEventListener("input", function() {
-    console.log("Value for y: " + yOffset.value);
+  document.getElementById("y").addEventListener("input", function() {
+    console.log("Value for y: " + this.value);
   });
-  blur.addEventListener("input", function() {
-    console.log("Value for blur: " + blur.value);
+  document.getElementById("blur").addEventListener("input", function() {
+    console.log("Value for blur: " + this.value);
   });
-  spread.addEventListener("input", function() {
-    console.log("Value for spread: " + spread.value);
+  document.getElementById("spread").addEventListener("input", function() {
+    console.log("Value for spread: " + this.value);
   });
 });
