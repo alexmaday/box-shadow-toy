@@ -10,15 +10,20 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 
   document.getElementById("x").addEventListener("input", function() {
-    console.log("Value for x: " + this.value);
+    // update label values
+    let rangeValue = document.getElementsByClassName("label-range-value")[0];
+    rangeValue.textContent = this.value;
   });
   document.getElementById("y").addEventListener("input", function() {
-    console.log("Value for y: " + this.value);
+    let rangeValue = document.getElementsByClassName("label-range-value")[1];
+    rangeValue.textContent = this.value;
   });
   document.getElementById("blur").addEventListener("input", function() {
-    console.log("Value for blur: " + this.value);
+    let rangeValue = document.getElementsByClassName("label-range-value")[2];
+    rangeValue.textContent = this.value;
   });
   document.getElementById("spread").addEventListener("input", function() {
-    console.log("Value for spread: " + this.value);
+    let rangeValue = document.getElementsByClassName("label-range-value")[3];
+    rangeValue.textContent = this.value;
   });
 });
