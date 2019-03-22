@@ -16,11 +16,21 @@ form {
   width: 308px;
   padding: 12px;
 }
-label,
 input {
   display: block;
   width: 250px;
-  margin: 12px auto;
+  margin: 10px auto;
+}
+.label-description,
+.label-range-value {
+  width: 50px;
+  margin: 10px auto;
+}
+.label-description {
+  float: left;
+}
+.label-range-value {
+  float: right;
 }
 
 legend {
