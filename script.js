@@ -6,8 +6,6 @@ document.addEventListener("DOMContentLoaded", function () {
     spread: "0",
     getAttributes: function () {
       let rangeValues = `${this.x} ${this.y} ${this.blur} ${this.spread}`;
-      console.log(rangeValues);
-
       return rangeValues;
     }
   };
