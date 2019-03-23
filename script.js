@@ -1,16 +1,11 @@
-document.addEventListener("DOMContentLoaded", function() {
-  // retrieve a value from a range control
-  //   function getRangeControlValue(id) {
-  //     return document.getElementById(id).value;
-  //   }
-
-  let boxShadowAttribute = {
+document.addEventListener("DOMContentLoaded", function () {
+  let boxShadowOptions = {
     x: "0",
     y: "0",
     blur: "0",
     spread: "0",
-    getAttributes: function() {
-      let rangeValues = `${this.x}, ${this.y}, ${this.blur}, ${this.spread}`;
+    getAttributes: function () {
+      let rangeValues = `${this.x} ${this.y} ${this.blur} ${this.spread}`;
       console.log(rangeValues);
 
       return rangeValues;
@@ -19,26 +14,32 @@ document.addEventListener("DOMContentLoaded", function() {
 
   function changeBoxShadow() {
     let box = document.getElementById("box");
-    box.style.boxShadow = boxShadowAttribute.getAttributes;
+    box.style.boxShadow = boxShadowOptions.getAttributes();
   }
 
-  document.getElementById("x").addEventListener("input", function() {
+  document.getElementById("x").addEventListener("input", function () {
     // update label values
     let rangeValue = document.getElementsByClassName("label-range-value")[0];
     rangeValue.textContent = this.value;
-    boxShadowAttribute.x = this.value;
+    boxShadowOptions.x = this.value + "px";
     changeBoxShadow();
   });
-  document.getElementById("y").addEventListener("input", function() {
+  document.getElementById("y").addEventListener("input", function () {
     let rangeValue = document.getElementsByClassName("label-range-value")[1];
     rangeValue.textContent = this.value;
+    boxShadowOptions.y = this.value + "px";
+    changeBoxShadow();
   });
-  document.getElementById("blur").addEventListener("input", function() {
+  document.getElementById("blur").addEventListener("input", function () {
     let rangeValue = document.getElementsByClassName("label-range-value")[2];
     rangeValue.textContent = this.value;
+    boxShadowOptions.blur = this.value + "px";
+    changeBoxShadow();
   });
-  document.getElementById("spread").addEventListener("input", function() {
+  document.getElementById("spread").addEventListener("input", function () {
     let rangeValue = document.getElementsByClassName("label-range-value")[3];
     rangeValue.textContent = this.value;
+    boxShadowOptions.spread = this.value + "px";
+    changeBoxShadow();
   });
 });
