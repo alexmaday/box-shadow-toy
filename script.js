@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-  document.getElementById('ui').addEventListener("input", function (ev) {
+  let re;
+  let update = function () {
     // loop through range controls
     let rangeValues = "";
     let rangeControls = document.querySelectorAll('[type="range"]');
@@ -12,5 +13,9 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     // modify the boxShadow
     document.getElementById('box').style.boxShadow = rangeValues;
-  });
+  };
+  document.getElementById('ui').addEventListener('input', update);
+  /*   document.getElementById('ui').addEventListener('reset', function (ev) {
+      update();
+    }); */
 });
