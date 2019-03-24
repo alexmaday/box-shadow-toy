@@ -1,43 +1,16 @@
 document.addEventListener("DOMContentLoaded", function () {
-  let boxShadowOptions = {
-    x: "0",
-    y: "0",
-    blur: "0",
-    spread: "0",
-    getAttributes: function () {
-      let rangeValues = `${this.x} ${this.y} ${this.blur} ${this.spread}`;
-      return rangeValues;
+
+  document.getElementById('ui').addEventListener("input", function (ev) {
+    // loop through range controls
+    let rangeValues = "";
+    let rangeControls = document.querySelectorAll('[type="range"]');
+    let rangeLabels = document.getElementsByClassName('label-range-value');
+    for (let i = 0, countOfRangeControls = rangeControls.length; i < countOfRangeControls; i++) {
+      // build list of attributes for boxShadow
+      rangeValues += rangeControls[i].value + "px ";
+      rangeLabels[i].textContent = rangeControls[i].value;
     }
-  };
-
-  function changeBoxShadow() {
-    let box = document.getElementById("box");
-    box.style.boxShadow = boxShadowOptions.getAttributes();
-  }
-
-  document.getElementById("x").addEventListener("input", function () {
-    // update label values
-    let rangeValue = document.getElementsByClassName("label-range-value")[0];
-    rangeValue.textContent = this.value;
-    boxShadowOptions.x = this.value + "px";
-    changeBoxShadow();
-  });
-  document.getElementById("y").addEventListener("input", function () {
-    let rangeValue = document.getElementsByClassName("label-range-value")[1];
-    rangeValue.textContent = this.value;
-    boxShadowOptions.y = this.value + "px";
-    changeBoxShadow();
-  });
-  document.getElementById("blur").addEventListener("input", function () {
-    let rangeValue = document.getElementsByClassName("label-range-value")[2];
-    rangeValue.textContent = this.value;
-    boxShadowOptions.blur = this.value + "px";
-    changeBoxShadow();
-  });
-  document.getElementById("spread").addEventListener("input", function () {
-    let rangeValue = document.getElementsByClassName("label-range-value")[3];
-    rangeValue.textContent = this.value;
-    boxShadowOptions.spread = this.value + "px";
-    changeBoxShadow();
+    // modify the boxShadow
+    document.getElementById('box').style.boxShadow = rangeValues;
   });
 });

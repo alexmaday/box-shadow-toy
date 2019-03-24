@@ -1,71 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>CSS box-shadow Toy</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div class="container">
-      <div id="box"></div>
 
-      <form action="">
-        <fieldset>
-          <legend>Attributes for Box Shadow</legend>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>CSS box-shadow Toy</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-          <label for="x-offset" id="x-label">
-            <span class="label-description">x-offset</span>
-            <span class="label-range-value">0</span>
-          </label>
-          <input
-            type="range"
-            id="x"
-            name="x-offset"
-            min="-20"
-            max="20"
-            value="0"
-          />
-          <label for="y-offset">
-            <span class="label-description">y-offset</span>
-            <span class="label-range-value">0</span>
-          </label>
-          <input
-            type="range"
-            id="y"
-            name="y-offset"
-            min="-20"
-            max="20"
-            value="0"
-          />
-          <label for="blur-radius">
-            <span class="label-description">blur</span>
-            <span class="label-range-value">0</span>
-          </label>
-          <input
-            type="range"
-            id="blur"
-            name="blur-radius"
-            min="-20"
-            max="20"
-            value="0"
-          />
-          <label for="spread-radius">
-            <span class="label-description">spread</span>
-            <span class="label-range-value">0</span>
-          </label>
-          <input
-            type="range"
-            id="spread"
-            name="spread-radius"
-            min="-20"
-            max="20"
-            value="0"
-          />
-        </fieldset>
-      </form>
-    </div>
-    <script src="script.js"></script>
-  </body>
+<body>
+  <div class="container">
+    <div id="box"></div>
+
+    <form id="ui" action="">
+      <fieldset>
+        <legend>Attributes for Box Shadow</legend>
+
+        <label for="x-offset" id="x-label">
+          <span class="label-description">x-offset</span>
+          <span class="label-range-value">0</span>
+        </label>
+        <input type="range" id="x" name="x-offset" min="-20" max="20" value="0" />
+        <label for="y-offset">
+          <span class="label-description">y-offset</span>
+          <span class="label-range-value">0</span>
+        </label>
+        <input type="range" id="y" name="y-offset" min="-20" max="20" value="0" />
+        <label for="blur-radius">
+          <span class="label-description">blur</span>
+          <span class="label-range-value">0</span>
+        </label>
+        <input type="range" id="blur" name="blur-radius" min="-20" max="20" value="0" />
+        <label for="spread-radius">
+          <span class="label-description">spread</span>
+          <span class="label-range-value">0</span>
+        </label>
+        <input type="range" id="spread" name="spread-radius" min="-20" max="20" value="0" />
+      </fieldset>
+    </form>
+  </div>
+  <script src="script.js"></script>
+</body>
+
 </html>
