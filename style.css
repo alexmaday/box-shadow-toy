@@ -12,6 +12,9 @@
   width: 25vh;
   margin-bottom: 100px;
 }
+#el-color-picker {
+  margin: 18px auto;
+}
 form {
   width: 308px;
   padding: 12px;
