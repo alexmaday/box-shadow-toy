@@ -14,8 +14,14 @@ document.addEventListener("DOMContentLoaded", function () {
     // modify the boxShadow
     document.getElementById('box').style.boxShadow = rangeValues;
   };
+  // TODO: Reset button needs to reset values and have the model **reflect** those changes
   document.getElementById('ui').addEventListener('input', update);
   /*   document.getElementById('ui').addEventListener('reset', function (ev) {
       update();
     }); */
+
+  // Update the backgroundColor for the box
+  document.getElementById('el-color-picker').addEventListener('change', function (e) {
+    document.getElementById('box').style.backgroundColor = e.target.value;
+  });
 });
